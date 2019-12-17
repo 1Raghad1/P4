@@ -5,9 +5,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import addProject from '/Users/sarakhaled/Desktop/SEI/projects/P4/frontend/src/addPost/addPost.js'
+import addProject from '../../addPost/addPost'
 import {Image, Container,Button} from 'react-bootstrap'
-import '/Users/sarakhaled/Desktop/SEI/projects/P4/frontend/src/homePage/homepage.css'
+import '../homepage.css'
 export default class imagepage extends Component {
   render() {
     return (

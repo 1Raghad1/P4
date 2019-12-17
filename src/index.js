@@ -12,6 +12,9 @@ import App from './App';
 import ButterToast from 'butter-toast/dist/lean.min.js';
 import * as serviceWorker from './serviceWorker';
 
+
+
+
 Amplify.configure({
     Auth: {
       mandatorySignIn: true,

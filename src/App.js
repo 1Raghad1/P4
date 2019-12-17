@@ -14,21 +14,40 @@ import Login from "./containers/Login";
 import axios from 'axios'
 // import AppliedRoute from "./components/AppliedRoute";
 import Signup from "./containers/Signup";
+import Chat from './chat/Chat/Chat'
+import Join from './chat/Join/Join'
+import FHome from './freelancer/FHome';
 export default class App extends Component {
+  constructor(props) {
+    super(props)
+  this.state ={
+    name:'raghad'
+  }
+}
   render() {
     return (
-      <div>
+      <>
    <Nav/>
-
-   <BrowserRouter>
+   {/* <FHome/> */}
+   < BrowserRouter >
+   <Switch>
+   <Route exact path="/" exact component={HomePage} />
+      <Route path={"/fhome"} render={(props)=>this.state.data!==null  ? <FHome  {...props} data={this.state.name} />:null} />
+      <Route path="/join" exact component={Join} />
+      <Route path="/chat" component={Chat} />
+      </Switch>
+    </ BrowserRouter >
+   
+   {/* <FreelancerProfile/> */}
+   {/* <BrowserRouter>
     <Switch>
 <Route exact path='/' component={HomePage} />
     <Route exact path='/addProject' component={addProject} />
 <Route exact path='/profile' component ={FreelancerProfile} />
 <Route exact path = '/checkout' component ={Checkout} />
     </Switch>
-    </BrowserRouter>
-      </div>
+    </BrowserRouter> */}
+      </>
     )
   }
 }

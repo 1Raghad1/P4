@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Icon} from 'semantic-ui-react'
-import '/Users/sarakhaled/Desktop/SEI/projects/P4/frontend/src/homePage/homepage.css'
+import '../homePage/homepage.css'
 import { Container } from 'react-bootstrap'
 export default class footer extends Component {
     render() {
